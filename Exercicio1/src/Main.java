@@ -1,10 +1,20 @@
 public class Main {
     public static void main(String[] args) {
-        Conta conta = new Conta();
+        Cliente cliente = new Cliente();
+        for(int i=0;i<12;i++){
+            for(int j=0;j<31;j++){
+                cliente.conta.extrato[j][i] ="";
+            }
+        }    
+        
+        cliente.conta.depositar(500);
+        cliente.conta.sacar(200);
+        cliente.nome = "lucas";
+        cliente.cpf = "123";
 
-        conta.depositar(500);
-        conta.sacar(125);
+        System.out.println(cliente.conta.retornarDados());
+        System.out.println(cliente.conta.gerarExtrato(20));
+       
 
-        System.out.println(conta.retornarDados());
     }
 }
